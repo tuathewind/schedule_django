@@ -1,0 +1,19 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Учебные группы</h1>
+
+    {% if group_list %}
+    <ul>
+
+      {% for group in group_list %}
+      <li>
+        <a href="{{ group.get_absolute_url }}">{{ group.number }}</a>
+      </li>
+      {% endfor %}
+
+    </ul>
+    {% else %}
+      <p>Ни одной группы в список еще не добавлено.</p>
+    {% endif %}
+{% endblock %}

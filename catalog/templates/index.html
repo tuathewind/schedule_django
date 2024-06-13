@@ -1,0 +1,38 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>Расписание занятий</h1>
+<h2><strong>Расписание на </strong> 05.04.2024 </h2>
+{% if schedule_list %}
+
+
+      <table border=1>
+
+<thead>
+  <tr>
+    <th>№</th>
+    <th>Дисциплина</th>
+    <th>Группа</th>
+    <th>Преподаватель</th>
+    <th>Аудитория</th>
+  </tr>
+  </thead>
+      {% for schedule in schedule_list %}
+          <tbody>
+  <tr>
+    <td>{{schedule.number_pair}}</td>
+    <td>{{schedule.discipline}}</td>
+    <td>{{schedule.group}}</td>
+    <td>{{schedule.teacher}}</td>>
+    <td>{{schedule.class_number}}</td>
+  </tr>
+  </tbody>
+        {% endfor %}
+        </table>
+
+    {% else %}
+      <p>Расписание еще не введено.</p>
+    {% endif %}
+
+
+{% endblock %}

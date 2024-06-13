@@ -1,0 +1,11 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Студент</h1>
+
+  <p><strong>Имя:</strong> {{ student.first_name }}</p> <!-- author detail link not yet defined -->
+  <p><strong>Фамилия:</strong> {{ student.last_name }}</p>
+  <p><strong>Отчество:</strong> {{ student.middle_name }}</p>
+  <p><strong>Группа:</strong> <a href=""> {{ student.group }}</a></p>
+
+{% endblock %}
